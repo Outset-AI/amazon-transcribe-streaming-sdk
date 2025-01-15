@@ -255,10 +255,9 @@ class StartStreamTranscriptionRequest:
         language_model_name=None,
         identify_language=None,
         preferred_language=None,
-        identify_multiple_languages=False,
+        identify_multiple_languages=None,
         language_options=None,
     ):
-
         self.language_code: Optional[str] = language_code
         self.media_sample_rate_hz: Optional[int] = media_sample_rate_hz
         self.media_encoding: Optional[str] = media_encoding
@@ -267,13 +266,13 @@ class StartStreamTranscriptionRequest:
         self.vocab_filter_method: Optional[str] = vocab_filter_method
         self.vocab_filter_name: Optional[str] = vocab_filter_name
         self.show_speaker_label: Optional[bool] = show_speaker_label
-        self.enable_channel_identification: Optional[
-            bool
-        ] = enable_channel_identification
+        self.enable_channel_identification: Optional[bool] = (
+            enable_channel_identification
+        )
         self.number_of_channels: Optional[int] = number_of_channels
-        self.enable_partial_results_stabilization: Optional[
-            bool
-        ] = enable_partial_results_stabilization
+        self.enable_partial_results_stabilization: Optional[bool] = (
+            enable_partial_results_stabilization
+        )
         self.partial_results_stability: Optional[str] = partial_results_stability
         self.language_model_name: Optional[str] = language_model_name
         self.identify_language: Optional[bool] = identify_language
@@ -362,13 +361,13 @@ class StartStreamTranscriptionResponse:
         self.vocab_filter_name: Optional[str] = vocab_filter_name
         self.vocab_filter_method: Optional[str] = vocab_filter_method
         self.show_speaker_label: Optional[bool] = show_speaker_label
-        self.enable_channel_identification: Optional[
-            bool
-        ] = enable_channel_identification
+        self.enable_channel_identification: Optional[bool] = (
+            enable_channel_identification
+        )
         self.number_of_channels: Optional[int] = number_of_channels
-        self.enable_partial_results_stabilization: Optional[
-            bool
-        ] = enable_partial_results_stabilization
+        self.enable_partial_results_stabilization: Optional[bool] = (
+            enable_partial_results_stabilization
+        )
         self.partial_results_stability: Optional[str] = partial_results_stability
         self.language_model_name: Optional[str] = language_model_name
 
