@@ -71,7 +71,6 @@ class TranscribeStreamingClient:
     async def start_stream_transcription(
         self,
         *,
-        language_code: str,
         media_sample_rate_hz: int,
         media_encoding: str,
         vocabulary_name: Optional[str] = None,
@@ -83,6 +82,7 @@ class TranscribeStreamingClient:
         number_of_channels: Optional[int] = None,
         enable_partial_results_stabilization: Optional[bool] = None,
         partial_results_stability: Optional[str] = None,
+        language_code: Optional[str] = None,
         language_model_name: Optional[str] = None,
         identify_language: Optional[bool] = None,
         preferred_language: Optional[str] = None,
